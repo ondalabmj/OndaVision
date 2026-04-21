@@ -13,13 +13,36 @@ export function Header({ onToggleHistory }: HeaderProps) {
   return (
     <header className="h-16 border-b border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-950 flex items-center justify-between px-8 sticky top-0 z-50">
       <div className="flex items-center gap-2">
-        <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center bg-zinc-50 dark:bg-zinc-900">
-          <img 
-            src="/logo.png" 
-            alt="OndaVision Logo" 
-            className="w-full h-full object-contain"
-            referrerPolicy="no-referrer"
-          />
+        <div className="w-9 h-9 flex items-center justify-center">
+          <svg
+            viewBox="0 0 100 100"
+            className="w-full h-full fill-none stroke-[#111827] dark:stroke-white"
+            style={{ strokeWidth: 8 }}
+          >
+            {/* Magnifying Glass / Lens Outer Ring */}
+            <circle cx="45" cy="45" r="35" stroke="currentColor" />
+            
+            {/* Reflection Highlight (The "shine" from the reference) */}
+            <path
+              d="M30 30 Q 35 22 45 22"
+              stroke="currentColor"
+              strokeWidth="6"
+              strokeLinecap="round"
+              className="opacity-40"
+            />
+            <circle cx="32" cy="24" r="3" fill="currentColor" className="opacity-40" stroke="none" />
+
+            {/* Handle */}
+            <line
+              x1="70"
+              y1="70"
+              x2="85"
+              y2="85"
+              stroke="currentColor"
+              strokeWidth="12"
+              strokeLinecap="round"
+            />
+          </svg>
         </div>
         <h1 className="font-bold text-[18px] tracking-[-0.03em] text-[#111827] dark:text-white">
           OndaVision
