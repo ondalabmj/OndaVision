@@ -15,7 +15,7 @@ export function Header({ onToggleHistory }: HeaderProps) {
       <div className="flex items-center gap-2">
         <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center bg-zinc-50 dark:bg-zinc-900">
           <img 
-            src="/public/logo.png" 
+            src="/logo.png" 
             alt="OndaVision Logo" 
             className="w-full h-full object-contain"
             referrerPolicy="no-referrer"
